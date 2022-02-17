@@ -28,7 +28,7 @@ public class CoronaTestBlockchain {
 				return false;
 			}
 
-			if ( !lAkutellerBlock.raetselGelöst() ) {
+			if ( !lAkutellerBlock.raetselGeloest() ) {
 				return false;
 			}
 		}
@@ -46,10 +46,10 @@ public class CoronaTestBlockchain {
 	
 	private static void displayHauptbuch() {
 		System.out.println("");
-		System.out.println("Hauptbuch anzeigen, Anzahldatensätze="+mHauptKassenbuch.size());
-		System.out.println("Nr|VorgängerBlockHash                                              "+
+		System.out.println("Hauptbuch anzeigen, Anzahldatensï¿½tze="+mHauptKassenbuch.size());
+		System.out.println("Nr|VorgaengerBlockHash                                              "+
 		                     "| BlockHash                                                      "+
-				             "| Data (LaufNr-Rätsel)");
+				             "| Data (LaufNr-Raetsel)");
 		
 		int nr=0;
 		for (Block chain:mHauptKassenbuch) {
@@ -67,7 +67,7 @@ public class CoronaTestBlockchain {
 	
 	public static void main(String[] args) throws IOException {
 		
-		//Testblöcke beim Programmstart anlegen
+		//Testblï¿½cke beim Programmstart anlegen
 		mHauptKassenbuch = new ArrayList<Block>();
 		Block lBlock1=new Block( getLastArrayHash(), "Coronatest;Harry Potter;31.07.1980;10.02.2022;negativ");
 		mHauptKassenbuch.add(lBlock1);
@@ -85,7 +85,7 @@ public class CoronaTestBlockchain {
 		String lMenue="";
 		while (!lMenue.equals("q")) {
 			System.out.println("--------------------------------------------------------------------------------------------");
-			System.out.println("Menü: a=addBlock, d=showBlockChain, e=editBlock1(nur Daten), r=editBlock2(+HashGenerierung),");
+			System.out.println("Menï¿½: a=addBlock, d=showBlockChain, e=editBlock1(nur Daten), r=editBlock2(+HashGenerierung),");
 			System.out.print  ("      l=lade/s=speichern Hauptbuch, f=Suche Blockfehler, q=Programmende, Eingabe= ");
 			
 			InputStreamReader isr = new InputStreamReader(System.in);
@@ -210,8 +210,8 @@ public class CoronaTestBlockchain {
 			        	System.out.println("VorgaengerHash passt nicht!");
 			        	lFehler++;
 	    			}
-	    			if (!lVorgaengerBlock.raetselGelöst() ) {
-			        	System.out.println("Blockfehler! Rätzel nicht erfüllt! Zeile:"+n);
+	    			if (!lVorgaengerBlock.raetselGeloest() ) {
+			        	System.out.println("Blockfehler! Raetzel nicht erfaellt! Zeile:"+n);
 			        	lFehler++;
 	    			}
 	    		}
