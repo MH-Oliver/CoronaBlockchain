@@ -2,8 +2,10 @@
 In diesem Programm wird das Grundgerüst für eine Blockchain umgesetzt.
 Am Beispiel einer Coronatest Anwenden werden die Corona-Testergebnisse in einer lokalen Blockchain festgehalten.
 
+Bildschirmausgabe:
 
 Hauptbuch anzeigen, Anzahldatensaetze=6
+
 Nr|VorgaengerBlockHash                                              | BlockHash                                                      | Data (LaufNr-Raetsel)
 
 1|0000000000000000000000000000000000000000000000000000000000000000|cafe0eec648162da05d2623570b55f7da2ca203476bc3426de3ce923ab4c17de| Coronatest;Harry Potter;31.07.1980;10.02.2022;negativ (-5269364213904519537)
