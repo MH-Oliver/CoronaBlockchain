@@ -46,7 +46,7 @@ public class CoronaTestBlockchain {
 	
 	private static void displayHauptbuch() {
 		System.out.println("");
-		System.out.println("Hauptbuch anzeigen, Anzahldatens�tze="+mHauptKassenbuch.size());
+		System.out.println("Hauptbuch anzeigen, Anzahldatensaetze="+mHauptKassenbuch.size());
 		System.out.println("Nr|VorgaengerBlockHash                                              "+
 		                     "| BlockHash                                                      "+
 				             "| Data (LaufNr-Raetsel)");
@@ -67,7 +67,7 @@ public class CoronaTestBlockchain {
 	
 	public static void main(String[] args) throws IOException {
 		
-		//Testbl�cke beim Programmstart anlegen
+		//Testbloecke beim Programmstart anlegen
 		mHauptKassenbuch = new ArrayList<Block>();
 		Block lBlock1=new Block( getLastArrayHash(), "Coronatest;Harry Potter;31.07.1980;10.02.2022;negativ");
 		mHauptKassenbuch.add(lBlock1);
@@ -85,8 +85,8 @@ public class CoronaTestBlockchain {
 		String lMenue="";
 		while (!lMenue.equals("q")) {
 			System.out.println("--------------------------------------------------------------------------------------------");
-			System.out.println("Men�: a=addBlock, d=showBlockChain, e=editBlock1(nur Daten), r=editBlock2(+HashGenerierung),");
-			System.out.print  ("      l=lade/s=speichern Hauptbuch, f=Suche Blockfehler, q=Programmende, Eingabe= ");
+			System.out.println("Menue: a=addBlock, d=showBlockChain, e=editBlock1(nur Daten), r=editBlock2(+HashGenerierung),");
+			System.out.print  ("       l=lade/s=speichern Hauptbuch, f=Suche Blockfehler, q=Programmende, Eingabe= ");
 			
 			InputStreamReader isr = new InputStreamReader(System.in);
 	        BufferedReader br = new BufferedReader(isr);
