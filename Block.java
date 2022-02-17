@@ -16,19 +16,19 @@ public class Block {
 		mBlockData = pBlockData;
 		mLaufNrRaetsel = 0;//new Date().getTime();
 
-		System.out.print("erzeuge neuen Block (Rätsel Hash["+mHashRaetsel+"*])...");
+		System.out.print("erzeuge neuen Block (Raetsel Hash["+mHashRaetsel+"*])...");
 		mBlockhash = getHash();
 
 		// schwierige Regel um Zeit zu gewinnen
-		// Hier könnten jetzt viele Rechner mit rechnen
-		// Wer die Lösung findet, bekommt eine Belohnung
-		while (!raetselGelöst() ) {
+		// Hier koennten jetzt viele Rechner mit rechnen
+		// Wer die Loesung findet, bekommt eine Belohnung
+		while (!raetselGeloest() ) {
 			
 			//Wie soll ein Client den Hashwert finden?
 
 			//mLaufNrRaetsel = new Date().getTime(); // aus aktueller Uhrzeit umrechnen
-			//mLaufNr++; //durch hochzählen
-			mLaufNrRaetsel=new Random().nextLong();//ein Zufallszahl auswählen
+			//mLaufNr++; //durch hochzÃ¤hlen
+			mLaufNrRaetsel=new Random().nextLong();//ein Zufallszahl auswÃ¤hlen
 			
 			//Hashwert mit akuteller LaufNrRaetsel neu berechnen
 			mBlockhash = getHash();
@@ -36,11 +36,11 @@ public class Block {
 		System.out.println("gefunden!");
 	}
 
-	//Konstruktor 1 (fürs laden)  
+	//Konstruktor 1 (fuers laden)  
 	public Block() {
 	}
 	
-	public boolean raetselGelöst() {
+	public boolean raetselGeloest() {
 		return ( mBlockhash.startsWith(mHashRaetsel) );
 	}
 	
@@ -78,7 +78,4 @@ public class Block {
                 +mBlockData 
 	           );
 	}
-	
-	
-	
 }
